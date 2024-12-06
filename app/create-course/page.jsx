@@ -6,6 +6,8 @@ import { BiSolidCategory } from "react-icons/bi";
 import { MdTopic } from "react-icons/md";
 import { SlOptions } from "react-icons/sl";
 import SelectCategory from './_components/SelectCategory';
+import TopicDescription from './_components/TopicDescription';
+import SelectOption from './_components/SelectOption';
 
 function CreateCourse() {
     const StepperOptions=[
@@ -52,7 +54,10 @@ function CreateCourse() {
         </div>
         <div className='px-10 md:px-20 lg:px-44 -scroll-mt-10'>
             {/* Components */}
-            {activeIndex==0?<SelectCategory/>:null}
+            {activeIndex === 0 ? <SelectCategory /> :
+             activeIndex === 1 ? <TopicDescription /> : 
+             <SelectOption/>}
+
         {/* Next & Previous button */}
         <div className='flex justify-between mt-10'>
             <Button disabled={activeIndex==0} 
