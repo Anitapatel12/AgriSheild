@@ -21,13 +21,13 @@ function SideBar() {
         },
         {
             id:1,
-            name:'Explore',
+            name:' Policies',
             icon:<BsStack />,
             path:'/dashboard/explore'
          },
          {
             id:1,
-            name:'Upgrade',
+            name:'About Us',
             icon:<GoShieldCheck />,
             path:'/dashboard/upgrade'
          },
@@ -42,7 +42,7 @@ function SideBar() {
     const path=usePathname();
   return (
     <div className='fixed h-full md:w-64 p-5 shadow-md'>
-        <Image src={'/logo.svg'} width={160} height ={100}/>
+        <Image src={'/agri.svg'} width={100} height ={100}/>
         <hr className='my-5'/>
 
         <ul>
@@ -58,11 +58,7 @@ function SideBar() {
             ))}
 
         </ul>
-        <div className='absolute bottom-10 w-[80%]'>
-          <Progress value={55} />
-          <h2 className='text-sm my-2'>3 Out of 5 course created</h2>
-          <h2 className='text-xs text-gray-500'> Upgrade your plan for unlimited course generation</h2>
-        </div>
+       
     </div>
   )
 }
