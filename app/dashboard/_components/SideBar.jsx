@@ -29,7 +29,7 @@ function SideBar() {
             id:1,
             name:'About Us',
             icon:<GoShieldCheck />,
-            path:'/dashboard/upgrade'
+            path:'/dashboard/AboutUs'
          },
          {
             id:1,
