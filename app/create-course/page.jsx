@@ -1,12 +1,14 @@
-// page.jsx
-import Chatbot from './chatbot';
+import React from 'react';
+import ChatbotIframe from './Chatbot';
+ // Adjust the path accordingly
 
-const Page = () => {
+const CreateCoursePage = () => {
   return (
-    <div className="w-full max-w-3xl">
-      <Chatbot />
+    <div>
+      
+      <ChatbotIframe/>
     </div>
   );
 };
 
-export default Page;
+export default CreateCoursePage;
