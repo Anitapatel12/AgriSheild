@@ -38,10 +38,12 @@ function Headerss() {
             <span className="mr-4">ਸਤ ਸ੍ਰੀ ਅਕਾਲ </span>
             <span className="mr-4">வணக்கம் </span>
             <span className="mr-4">నమస్కారం</span>
-            <span className="mr-4">السلام علیکم </span>
+            <span className="mr-4">السلام </span>
           </div>
         </div>
-  
+  <div>
+    <UserButton/>
+  </div>
         {/* Add more navigation or items as needed */}
       </div>
     );

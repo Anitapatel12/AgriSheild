@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Link } from "lucide-react";
 import React, { useRef } from "react";
 
@@ -11,6 +12,10 @@ function Explore() {
 
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleNavigation = () => {
+    window.location.href = './client.html'; // Relative path to your HTML file
   };
 
   return (
@@ -65,12 +70,19 @@ function Explore() {
           Explore Insurance Schemes
         </h2>
         <ul style={{ listStyleType: "none", paddingLeft: "0", fontSize: "16px", color: "#34495e" }}>
-          {[
-            { label: "PMFBY (Pradhan Mantri Fasal Bima Yojana)", ref: pmfbyRef },
-            { label: "Weather-Based Insurance", ref: weatherBasedRef },
-            { label: "Revenue Protection Policies", ref: revenueProtectionRef },
-            { label: "Market Risk Insurance", ref: marketRiskInsuranceRef },
-          ].map((item, index) => (
+          {[{
+            label: "PMFBY (Pradhan Mantri Fasal Bima Yojana)",
+            ref: pmfbyRef
+          }, {
+            label: "Weather-Based Insurance",
+            ref: weatherBasedRef
+          }, {
+            label: "Revenue Protection Policies",
+            ref: revenueProtectionRef
+          }, {
+            label: "Market Risk Insurance",
+            ref: marketRiskInsuranceRef
+          }].map((item, index) => (
             <li
               key={index}
               style={{
@@ -90,6 +102,8 @@ function Explore() {
         </ul>
       </div>
 
+     
+
       {/* Insurance Schemes Detailed Sections */}
       <div>
         {[{
@@ -98,7 +112,7 @@ function Explore() {
             image: "https://c0.wallpaperflare.com/preview/154/907/657/paddy-field-paddy-crop-agriculture-paddy.jpg",
             description: (
               <p>
-                PMFBY (Pradhan Mantri Fasal Bima Yojana) is a government-supported crop insurance scheme launched in 2016 to ensure financial security for Indian farmers against natural disasters, pests, diseases, and crop failures. Designed to be affordable, the scheme offers premium rates of 2% for kharif crops and 1.5% for rabi crops, making it accessible to all farmers.
+                PMFBY is a government-supported crop insurance scheme launched in 2016 to ensure financial security for Indian farmers against natural disasters, pests, diseases, and crop failures.
               </p>
             ),
           }, {
@@ -107,7 +121,7 @@ function Explore() {
             image: "https://tse2.mm.bing.net/th?id=OIP.ongFydGgJk9z27hExkw79QHaEo&pid=Api&P=0&h=180",
             description: (
               <p>
-                Weather-Based Insurance is a type of crop insurance that provides financial protection to farmers against losses caused by adverse weather conditions such as drought, floods, unseasonal rainfall, and other climatic changes. This insurance is designed to cover risks based on specific weather parameters, such as rainfall, temperature, or other climatic factors.
+                Weather-Based Insurance protects farmers against losses caused by adverse weather conditions such as drought, floods, and unseasonal rainfall.
               </p>
             ),
           },
@@ -117,7 +131,7 @@ function Explore() {
             image: "https://tse4.mm.bing.net/th?id=OIP.leUcEChYZIbEsnNYuhNvmAHaE8&pid=Api&P=0&h=180",
             description: (
               <p>
-                Revenue Protection Policies are a type of crop insurance designed to safeguard farmers against financial losses resulting from a significant drop in crop revenue. These policies focus on ensuring compensation when a farmer's income falls below a certain predetermined revenue threshold due to factors such as production risks or market price fluctuations.
+                Revenue Protection Policies safeguard farmers against financial losses resulting from a significant drop in crop revenue.
               </p>
             ),
           },
@@ -127,7 +141,7 @@ function Explore() {
             image: "https://wallpapercave.com/wp/wp6592172.jpg",
             description: (
               <p>
-                Market Risk Insurance is a specialized type of crop insurance designed to protect farmers from financial losses caused by fluctuations in market prices. It helps to mitigate the risks associated with price volatility that can arise due to changes in demand, supply, or global economic trends.
+                Market Risk Insurance helps farmers mitigate financial risks caused by price volatility due to changes in demand or supply.
               </p>
             ),
           }].map((section, index) => (
@@ -166,28 +180,8 @@ function Explore() {
               <div style={{ color: "#7f8c8d", fontSize: "1.125rem" }}>{section.description}</div>
             </div>
           </div>
-        ))}
+        ))} 
       </div>
-      <div style={{ textAlign: "center", marginTop: "20px" }}>
-          <Link
-            href="/dashboard/explore/client" // Replace with your page's actual route
-            style={{
-              display: "inline-block",
-              padding: "10px 20px",
-              backgroundColor: "#3498db",
-              color: "#ffffff",
-              textDecoration: "none",
-              borderRadius: "8px",
-              fontSize: "16px",
-              fontWeight: "500",
-              transition: "background-color 0.3s ease",
-            }}
-            onMouseOver={(e) => (e.target.style.backgroundColor = "#2980b9")}
-            onMouseOut={(e) => (e.target.style.backgroundColor = "#3498db")}
-          >
-            Use Client
-          </Link>
-        </div>
     </div>
   );
 }
