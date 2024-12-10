@@ -1,5 +1,6 @@
 "use client";
 
+import { Link } from "lucide-react";
 import React, { useRef } from "react";
 
 function Explore() {
@@ -167,6 +168,26 @@ function Explore() {
           </div>
         ))}
       </div>
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
+          <Link
+            href="/dashboard/explore/client" // Replace with your page's actual route
+            style={{
+              display: "inline-block",
+              padding: "10px 20px",
+              backgroundColor: "#3498db",
+              color: "#ffffff",
+              textDecoration: "none",
+              borderRadius: "8px",
+              fontSize: "16px",
+              fontWeight: "500",
+              transition: "background-color 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.backgroundColor = "#2980b9")}
+            onMouseOut={(e) => (e.target.style.backgroundColor = "#3498db")}
+          >
+            Use Client
+          </Link>
+        </div>
     </div>
   );
 }
