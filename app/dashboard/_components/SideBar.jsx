@@ -42,7 +42,7 @@ function SideBar() {
     const path=usePathname();
   return (
     <div className='fixed h-full md:w-64 p-5 shadow-md'>
-        <Image src={'/agri.svg'} width={100} height ={100}/>
+        <Image src={'/agri.svg'} width={120} height ={120}  className="ml-9  rounded-full shadow-lg"/>
         <hr className='my-5'/>
 
         <ul>
