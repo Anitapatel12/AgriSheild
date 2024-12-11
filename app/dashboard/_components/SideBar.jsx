@@ -33,9 +33,9 @@ function SideBar() {
          },
          {
             id:1,
-            name:'Logout',
+            name:'FeedBack',
             icon:<IoMdLogOut />,
-            path:'/dashboard/logout'
+            path:'/dashboard/FeedBack'
          }
     ]
 

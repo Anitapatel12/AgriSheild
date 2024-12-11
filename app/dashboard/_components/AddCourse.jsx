@@ -20,7 +20,7 @@ function AddCourse() {
   };
 
   return (
-    <div className="p-6 space-y-10">
+    <div className="p-6 space-y-10 ">
       {/* Main Content */}
       <div className="flex flex-col md:flex-row justify-between items-center bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 rounded-lg shadow-lg p-6">
         <div className="flex flex-col md:w-1/2 space-y-4">
